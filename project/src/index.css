@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  overflow-x: hidden;
+}
+canvas{
+    pointer-events: none;
+}
+
+/* Navigation styles */
+nav {
+  width: 100%;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.links {
+  display: flex;
+  gap: 2.5rem;
+  margin-right: 2rem;
+}
+
+/* First section text styles */
+.textcontainer {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  max-width: 600px;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.text h3 {
+  font-size: 1.8rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.text p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.text p:last-child {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* Nowhere text styles */
+h1{
+  font-size: 24rem;
+  font-weight: 400;
+  padding-top: 30rem;
+
+
+}
+
+/* About section styles */
+.about-section {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 50%;
+  padding-left: 2rem;
+  padding-top: 54rem;
+}
+
+.about-heading {
+  font-size: 4.5rem;
+  letter-spacing: -0.05em;
+  color: white;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.about-description {
+  font-size: 2.25rem;
+  line-height: 1.8;
+  width: 80%;
+  font-weight: 300;
+  color: white;
+  text-align: left;
+  opacity: 0.9;
+}
+
+/* Ensure text stays white */
+h1, h2, h3, h4, h5, h6, p, span, a, div {
+  color: white;
+  
+} 
+.growing-span {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: #fd2c2a;
+  border-radius: 50%;
+  transform-origin: center;
+  pointer-events: none;
+  opacity: 0;
+  z-index: -1;
+  transform: translate(-50%, -50%);  /* Centers the bubble on click point */
+}
+
+/* Optional: Add transition for body background */
+body {
+  transition: color 1s ease;
+}
